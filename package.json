@@ -1,0 +1,27 @@
+{
+  "name": "ticketsync",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build --config client/vite.config.js",
+    "start": "node server/index.js",
+    "dev": "vite --config client/vite.config.js",
+    "check": "node --check server/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "pg": "^8.13.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "redis": "^4.7.0",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
+    "@socket.io/redis-adapter": "^8.3.0"
+  },
+  "devDependencies": {
+    "vite": "^6.0.7"
+  }
+}

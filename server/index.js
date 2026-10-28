@@ -46,7 +46,7 @@ server.emit = function(event, ...args) {
   }
   return emit.call(this, event, ...args);
 };
-const io=new Server(server,{transports:['websocket'],cors:{origin:PUBLIC_ORIGIN,credentials:false}});
+const io=new Server(server,{path:'/api/ws',addTrailingSlash:false,transports:['websocket'],cors:{origin:PUBLIC_ORIGIN,credentials:false}});
 // A shared adapter forwards availability events to sockets on other instances.
 const socketPub = redis.duplicate(), socketSub = redis.duplicate();
 for (const client of [socketPub,socketSub]) client.on('error', error=>console.error('Socket Redis error:',error.message));

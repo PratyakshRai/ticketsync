@@ -6,12 +6,12 @@
   "outputDirectory": "dist",
   "rewrites": [
     {
-      "source": "/api/:path*",
-      "destination": "/api/index?__route=/api/:path*"
+      "source": "/api/events",
+      "destination": "/api/index?__route=/api/events"
     },
     {
-      "source": "/socket.io/:path*",
-      "destination": "/api/index?__route=/socket.io/:path*"
+      "source": "/api/events/:path*",
+      "destination": "/api/index?__route=/api/events/:path*"
     },
     {
       "source": "/health",
